@@ -7,9 +7,6 @@ import Filters from './components/Filters';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ordinal = ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th"];
-const type_names = ["Speed", "Stamina", "Power", "Guts", "Wisdom", "", "Friend"];
-
 class Global extends React.Component {
     constructor(props) {
         super(props);

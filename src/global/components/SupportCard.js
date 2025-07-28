@@ -17,16 +17,16 @@ function SupportCard(props) {
 
     for(let i=0; i<3; i++) {
         let stat = props.stats[i];
-        if (stat == "none") continue;
+        if (stat === "none") continue;
         let value = props.card[stat];
-        if (stat == "fs_bonus") {
+        if (stat === "fs_bonus") {
             value *= props.card["unique_fs_bonus"];
-        } else if (stat == "specialty_rate") {
+        } else if (stat === "specialty_rate") {
             value = (value + 100) * props.card["unique_specialty"] * props.card["fs_specialty"] - 100;
         }
         if (value < 1) {
             value *= 100;
-        } else if (value < 2 && stat != "race_bonus") {
+        } else if (value < 2 && stat !== "race_bonus") {
             value -= 1;
             value *= 100;
         }
